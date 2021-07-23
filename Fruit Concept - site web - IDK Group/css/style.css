@@ -1,0 +1,237 @@
+/* Mise en forme générale */
+
+*{
+    margin : 0; /*Espace exterieur des elements*/
+    padding: 0; /*Espace interieur des elements*/
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1E1E24;
+    color: #333;
+    font-family: "Arial", Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.25;
+}
+
+img{
+    width: 100%;
+    margin: auto 15%;
+    height: auto;
+}
+
+p{
+    margin-bottom: 12px;
+}
+
+main p{
+    text-align: justify;
+}
+
+.souligne{
+    text-decoration: underline;
+}
+
+.majuscule{
+    text-transform: uppercase;
+}
+
+/*
+Créer une class majuscule (qui transforme le texte en majuscule)
+appliquer au h3 du footer les class "souligne" et "majuscule"
+*/
+
+
+/* Mise en place de la navigation */
+/* /////////////////////////////////////////////////////// */
+/* mise en place du logo en haut a gauche  */
+.logo{
+    max-width: 105px;
+    position: absolute;
+    padding-left: 0.5em;
+    background-color: #282A41;
+}
+
+header{
+    background-color: #282A41;
+    color: white;
+}
+
+header div{
+    height: 30vh;
+    background-image: url("../img/Raisins.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    background-position: center;
+}
+
+header nav li{
+    padding-top: 15px;
+    margin: 12px;
+    margin-bottom: 1.5em;
+    list-style: none;
+    display: inline-block;
+}
+
+header nav li a{
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 7px;
+    text-decoration: none;
+}
+
+/* Etat normal du lien */
+header nav li a{
+    color: rgb(255,255,255); /*couleur blanche soit "white", "#fff"*/
+    background-color: rgba(0,0,0,0);
+
+}
+
+/* Etat survolé du lien */
+header nav li a:hover{
+    color: #FFF8F0;
+    background-color: #282A41;
+    transition: 0.5s;
+}
+/* Centrer le menu sur la page */
+header ul{
+    text-align: center;
+}
+
+/* Mise en place du main */
+
+main{
+    padding: 24px 18px;
+    background-color: #FFF8F0;
+    max-width: 1024px; 
+    margin: 0 auto;
+}
+
+main h1{
+    color: #1E1E24;
+    margin-bottom: 24px;
+    font-size: 2.6em;
+    font-weight: 800;
+    text-align: center;
+    border-bottom: 1px dashed #214567;
+    padding-bottom: 24px;
+}
+
+/*
+pour le h2 main :
+- taille de police : 1.6 fois plus grande
+- le gras du texte est a 300
+- un espace externe en dessous de 18 pixels
+- couleur du texte est blanche
+- la couleur de fond est la meme que la couleur du texte des h1
+- espace interne est de 7 pixels
+*/
+
+main h2{
+    font-size: 1.6em; /*changement de la taille de police*/
+    font-weight: 300;
+    margin-bottom: 18px;
+    color: white;
+    background-color: #92140C;
+    padding: 7px;
+}
+
+/*
+les h3 du main 
+taille de police de 1.6 fois plus grande
+un espace exterieur en bas de 12 pixels
+*/
+
+main h3{
+    font-size: 1.6em;
+    margin-bottom: 12px;
+}
+
+/*
+les articles qui sont dans la main
+- espace interieur en bas de 18px
+- espace exterieur en bas de 18px
+*/
+
+main article{
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+}
+
+main figure{
+    margin-bottom: 12px;
+}
+
+/*
+pour les figcaptions du main
+- un texte de couleur rgb 242 242 242
+- couleur de fond  #383b3f
+- texte soit aligné au centre
+- texte soit en italique
+- taille du texte soitr à 0.9 fois la taille normale
+*/
+
+main figcaption{
+    color: rgb(242,242,242);
+    background-color: #383b3f;
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 7px;
+}
+
+.center{
+    width: 70%;
+    margin: auto 15%;
+    height: auto;
+    border: 5px solid #282A41;
+}
+
+/* Mise en place du footer */
+
+footer{
+    color: rgb(217, 217, 217);
+    background-color: #282A41;
+    padding: 24px 18px;
+    text-align: center;
+}
+
+footer h3{
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    color: white;
+}
+
+
+#presentation{
+    text-align: center;
+    color: rgb(236, 236, 236);
+}
+/*
+Le footer a une couleur de fond de rgb 64 64 64, 
+une couleur de texte de rgb 217 217 217
+un espace interieur haut/bas de 24px et gauche droite de 18px 
+padding : 24px 18px;
+le texte est aligné au centre
+les h3 ont une taille de 1.2 fois la taille normale
+ils ont un espace exterieur en bas de 12px
+et une couleur de texte blanche
+*/
+
+/* Mise en place de la gallerie d'images */
+
+@media screen and (min-width: 780px){
+
+    #gallery figure{
+        width: 47.5%;
+    }
+
+    .flexing{
+        display: flex;
+    }
+
+    #gallery{
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
